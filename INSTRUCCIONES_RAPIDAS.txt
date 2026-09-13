@@ -1,0 +1,15 @@
+SEMANA 5 - BANCO XYZ BFF
+
+1) docker compose up -d
+2) mvn clean package
+3) Primera carga:
+   mvn spring-boot:run "-Dspring-boot.run.arguments=--app.batch.run-on-startup=true --app.job.name=all"
+4) En ejecuciones posteriores:
+   mvn spring-boot:run
+5) Importar Banco_XYZ_BFF.postman_collection.json en Postman.
+
+Tokens:
+WEB    = web-xyz-2026
+MOBILE = mobile-xyz-2026
+ATM    = atm-xyz-2026
+ATM requiere además X-ATM-ID: ATM-001

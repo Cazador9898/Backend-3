@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: banco_xyz_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: banco_xyz
+      MYSQL_USER: banco
+      MYSQL_PASSWORD: banco123
+      MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3306:3306"
+    volumes:
+      - banco_xyz_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  banco_xyz_mysql_data:

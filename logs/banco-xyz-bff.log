@@ -1,0 +1,75 @@
+2026-09-13 12:28:16.119 INFO  [main] c.duoc.bancoxyz.BancoXyzApplication - Starting BancoXyzApplication using Java 21.0.11 with PID 2356 (C:\Users\guzma\OneDrive\Desktop\Desarrollo Backend 3\Exp2_S5_Alonso_Guzman_Ruz\Exp2_S5_Alonso_Guzman_Ruz\target\classes started by guzma in C:\Users\guzma\OneDrive\Desktop\Desarrollo Backend 3\Exp2_S5_Alonso_Guzman_Ruz\Exp2_S5_Alonso_Guzman_Ruz)
+2026-09-13 12:28:16.121 INFO  [main] c.duoc.bancoxyz.BancoXyzApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-13 12:28:16.876 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-09-13 12:28:16.887 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-13 12:28:16.888 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-09-13 12:28:16.927 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-09-13 12:28:16.927 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 776 ms
+2026-09-13 12:28:16.984 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-09-13 12:28:17.128 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e3cd6fe
+2026-09-13 12:28:17.129 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-09-13 12:28:18.244 WARN  [main] o.s.b.c.s.b.FaultTolerantStepBuilder - Asynchronous TaskExecutor detected with ItemStream reader.  This is probably an error, and may lead to incorrect restart data being stored.
+2026-09-13 12:28:18.260 WARN  [main] o.s.b.c.s.b.FaultTolerantStepBuilder - Asynchronous TaskExecutor detected with ItemStream reader.  This is probably an error, and may lead to incorrect restart data being stored.
+2026-09-13 12:28:18.264 WARN  [main] o.s.b.c.s.b.FaultTolerantStepBuilder - Asynchronous TaskExecutor detected with ItemStream reader.  This is probably an error, and may lead to incorrect restart data being stored.
+2026-09-13 12:28:18.488 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-09-13 12:28:18.495 INFO  [main] c.duoc.bancoxyz.BancoXyzApplication - Started BancoXyzApplication in 2.718 seconds (process running for 2.949)
+2026-09-13 12:28:18.588 INFO  [main] o.s.b.c.l.s.TaskExecutorJobLauncher - Job: [SimpleJob: [name=transaccionesJob]] launched with the following parameters: [{'run.id':'{value=1789313298498, type=class java.lang.Long, identifying=true}'}]
+2026-09-13 12:28:18.613 INFO  [main] c.d.b.listener.JobLoggingListener - Iniciando Job transaccionesJob con parámetros {'run.id':'{value=1789313298498, type=class java.lang.Long, identifying=true}'} | chunkSize=5 | threads=3
+2026-09-13 12:28:18.650 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [limpiarTransaccionesStep]
+2026-09-13 12:28:18.666 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step limpiarTransaccionesStep
+2026-09-13 12:28:18.699 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [limpiarTransaccionesStep] executed in 48ms
+2026-09-13 12:28:18.699 INFO  [main] c.d.b.listener.StepMetricsListener - Step limpiarTransaccionesStep finalizado en 33 ms | read=0 write=0 filter=0 skip=0 commits=1 rollbacks=0
+2026-09-13 12:28:18.762 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [transaccionesStep]
+2026-09-13 12:28:18.777 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step transaccionesStep
+2026-09-13 12:28:18.778 WARN  [main] o.s.b.core.step.item.ChunkMonitor - No ItemReader set (must be concurrent step), so ignoring offset data.
+2026-09-13 12:28:18.810 WARN  [banco-batch-2] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:18.810 WARN  [banco-batch-3] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:18.810 WARN  [banco-batch-1] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:18.892 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [transaccionesStep] executed in 129ms
+2026-09-13 12:28:18.893 INFO  [main] c.d.b.listener.StepMetricsListener - Step transaccionesStep finalizado en 116 ms | read=10 write=10 filter=0 skip=0 commits=5 rollbacks=0
+2026-09-13 12:28:18.941 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [resumenTransaccionesStep]
+2026-09-13 12:28:18.954 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step resumenTransaccionesStep
+2026-09-13 12:28:18.985 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [resumenTransaccionesStep] executed in 44ms
+2026-09-13 12:28:18.985 INFO  [main] c.d.b.listener.StepMetricsListener - Step resumenTransaccionesStep finalizado en 31 ms | read=0 write=0 filter=0 skip=0 commits=1 rollbacks=0
+2026-09-13 12:28:19.003 INFO  [main] c.d.b.listener.JobLoggingListener - Finalizó Job transaccionesJob - estado=COMPLETED - inicio=2026-09-13T12:28:18.595660900 - fin=2026-09-13T12:28:19.003051
+2026-09-13 12:28:19.016 INFO  [main] o.s.b.c.l.s.TaskExecutorJobLauncher - Job: [SimpleJob: [name=transaccionesJob]] completed with the following parameters: [{'run.id':'{value=1789313298498, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 407ms
+2026-09-13 12:28:19.065 INFO  [main] o.s.b.c.l.s.TaskExecutorJobLauncher - Job: [SimpleJob: [name=interesesJob]] launched with the following parameters: [{'run.id':'{value=1789313299017, type=class java.lang.Long, identifying=true}'}]
+2026-09-13 12:28:19.078 INFO  [main] c.d.b.listener.JobLoggingListener - Iniciando Job interesesJob con parámetros {'run.id':'{value=1789313299017, type=class java.lang.Long, identifying=true}'} | chunkSize=5 | threads=3
+2026-09-13 12:28:19.106 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [limpiarInteresesStep]
+2026-09-13 12:28:19.117 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step limpiarInteresesStep
+2026-09-13 12:28:19.148 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [limpiarInteresesStep] executed in 41ms
+2026-09-13 12:28:19.148 INFO  [main] c.d.b.listener.StepMetricsListener - Step limpiarInteresesStep finalizado en 31 ms | read=0 write=0 filter=0 skip=0 commits=1 rollbacks=0
+2026-09-13 12:28:19.201 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [interesesStep]
+2026-09-13 12:28:19.217 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step interesesStep
+2026-09-13 12:28:19.218 WARN  [main] o.s.b.core.step.item.ChunkMonitor - No ItemReader set (must be concurrent step), so ignoring offset data.
+2026-09-13 12:28:19.237 WARN  [banco-batch-1] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:19.237 WARN  [banco-batch-3] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:19.241 WARN  [banco-batch-2] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:19.243 WARN  [banco-batch-2] c.d.b.listener.SkipLoggingListener - Registro omitido durante procesamiento: item=cl.duoc.bancoxyz.model.InteresCuenta@d7e442 error=Tipo de cuenta no soportado: hipoteca
+2026-09-13 12:28:19.305 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [interesesStep] executed in 102ms
+2026-09-13 12:28:19.305 INFO  [main] c.d.b.listener.StepMetricsListener - Step interesesStep finalizado en 88 ms | read=8 write=5 filter=2 skip=1 commits=5 rollbacks=1
+2026-09-13 12:28:19.322 INFO  [main] c.d.b.listener.JobLoggingListener - Finalizó Job interesesJob - estado=COMPLETED - inicio=2026-09-13T12:28:19.065864400 - fin=2026-09-13T12:28:19.322418300
+2026-09-13 12:28:19.336 INFO  [main] o.s.b.c.l.s.TaskExecutorJobLauncher - Job: [SimpleJob: [name=interesesJob]] completed with the following parameters: [{'run.id':'{value=1789313299017, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 256ms
+2026-09-13 12:28:19.382 INFO  [main] o.s.b.c.l.s.TaskExecutorJobLauncher - Job: [SimpleJob: [name=estadosCuentaJob]] launched with the following parameters: [{'run.id':'{value=1789313299336, type=class java.lang.Long, identifying=true}'}]
+2026-09-13 12:28:19.393 INFO  [main] c.d.b.listener.JobLoggingListener - Iniciando Job estadosCuentaJob con parámetros {'run.id':'{value=1789313299336, type=class java.lang.Long, identifying=true}'} | chunkSize=5 | threads=3
+2026-09-13 12:28:19.423 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [limpiarMovimientosStep]
+2026-09-13 12:28:19.436 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step limpiarMovimientosStep
+2026-09-13 12:28:19.465 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [limpiarMovimientosStep] executed in 41ms
+2026-09-13 12:28:19.465 INFO  [main] c.d.b.listener.StepMetricsListener - Step limpiarMovimientosStep finalizado en 29 ms | read=0 write=0 filter=0 skip=0 commits=1 rollbacks=0
+2026-09-13 12:28:19.519 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [cargarMovimientosStep]
+2026-09-13 12:28:19.531 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step cargarMovimientosStep
+2026-09-13 12:28:19.532 WARN  [main] o.s.b.core.step.item.ChunkMonitor - No ItemReader set (must be concurrent step), so ignoring offset data.
+2026-09-13 12:28:19.550 WARN  [banco-batch-1] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:19.550 WARN  [banco-batch-3] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:19.550 WARN  [banco-batch-2] o.s.b.core.step.item.ChunkMonitor - ItemStream was opened in a different thread.  Restart data could be compromised.
+2026-09-13 12:28:19.618 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [cargarMovimientosStep] executed in 99ms
+2026-09-13 12:28:19.618 INFO  [main] c.d.b.listener.StepMetricsListener - Step cargarMovimientosStep finalizado en 87 ms | read=9 write=9 filter=0 skip=0 commits=5 rollbacks=0
+2026-09-13 12:28:19.662 INFO  [main] o.s.batch.core.job.SimpleStepHandler - Executing step: [generarResumenAnualStep]
+2026-09-13 12:28:19.675 INFO  [main] c.d.b.listener.StepMetricsListener - Iniciando Step generarResumenAnualStep
+2026-09-13 12:28:19.702 INFO  [main] o.s.batch.core.step.AbstractStep - Step: [generarResumenAnualStep] executed in 39ms
+2026-09-13 12:28:19.702 INFO  [main] c.d.b.listener.StepMetricsListener - Step generarResumenAnualStep finalizado en 27 ms | read=0 write=0 filter=0 skip=0 commits=1 rollbacks=0
+2026-09-13 12:28:19.719 INFO  [main] c.d.b.listener.JobLoggingListener - Finalizó Job estadosCuentaJob - estado=COMPLETED - inicio=2026-09-13T12:28:19.383406600 - fin=2026-09-13T12:28:19.719239300
+2026-09-13 12:28:19.731 INFO  [main] o.s.b.c.l.s.TaskExecutorJobLauncher - Job: [SimpleJob: [name=estadosCuentaJob]] completed with the following parameters: [{'run.id':'{value=1789313299336, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 335ms
+2026-09-13 12:39:52.381 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13 12:39:52.381 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-13 12:39:52.382 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
