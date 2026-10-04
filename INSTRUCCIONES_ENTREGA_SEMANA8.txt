@@ -1,0 +1,27 @@
+PASOS CORTOS PARA LA ENTREGA
+
+1) Abrir PowerShell en la raíz del proyecto.
+2) Compilar:
+   mvn.cmd clean package -DskipTests
+3) Construir contenedores:
+   docker compose build
+4) Levantar arquitectura:
+   docker compose up -d
+5) Verificar:
+   docker compose ps
+6) Obtener token OAuth2:
+   $token = (curl.exe -s -u banco-client:duoc-secret -d "grant_type=client_credentials" --data-urlencode "scope=banco.read banco.write" http://localhost:9000/oauth2/token | ConvertFrom-Json).access_token
+7) Probar cuenta:
+   curl.exe -H "Authorization: Bearer $token" http://localhost:8081/api/accounts
+8) Crear transacción:
+   curl.exe -X POST http://localhost:8082/api/transactions -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d '{"accountId":101,"monto":25000,"tipo":"credito"}'
+9) Revisar Kafka:
+   docker compose logs account-service --tail 100
+10) Probar Resilience4j:
+   curl.exe -H "Authorization: Bearer $token" http://localhost:8082/api/transactions/account/101/summary
+   docker compose stop account-service
+   curl.exe -H "Authorization: Bearer $token" http://localhost:8082/api/transactions/account/101/summary
+   docker compose start account-service
+11) Tomar capturas según Evidencias/README.txt.
+12) Subir código a GitHub.
+13) Comprimir la carpeta como Exp3_S8_Alonso_Guzman_Ruz.zip.
